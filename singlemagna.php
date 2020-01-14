@@ -29,7 +29,7 @@ function CheckCaptcha($userResponse) {
 	
     } else {
 		// If the CAPTCHA box wasn't checked
-		header("Location: registerworkshop.php.php");
+		header("Location: registermagna.php");
 		return;
     }
 }
@@ -38,7 +38,7 @@ function CheckCaptcha($userResponse) {
 		if(strlen($_POST['name'])<1)
 		{
 			$_SESSION['error'] = "Name should not be empty";
-			header("Location: registerworkshop.php.php");
+			header("Location: registermagna.php");
 			return;
 		}
 		// $events = "";
@@ -62,10 +62,10 @@ function CheckCaptcha($userResponse) {
 		if($row===false)
 		{
 			$_SESSION['error'] = "Invalid member id";
-			header("Location:registerppworkshop.php");
+			header("Location:registermagna.php");
 			return;
 		}
-		$stmt = $pdo->prepare("INSERT INTO techweek.ppworkshop  (name,ppworkshop_participant_id) VALUES (:nam,:id)");
+		$stmt = $pdo->prepare("INSERT INTO techweek.magna  (name,magna_participant_id) VALUES (:nam,:id)");
 		$stmt->execute(array(
 			':nam' => $_POST['name'],
 			':id' => $_POST['id']
@@ -77,7 +77,7 @@ function CheckCaptcha($userResponse) {
 	}
 	else{
 		$_SESSION['error'] = "Enter all the fields";
-		header("Location: registerworkshop.php");
+		header("Location: registermagna.php");
 		return;
 	}
 ?>

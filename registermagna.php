@@ -25,7 +25,7 @@
 	?>
 <p>
 	<div class="login">
-	<form method="post" action="singleppworkshop.php">
+	<form method="post" action="singlepmagna.php">
 		<label>Name</label> <br><input type="text" name="name"><br>
 		<label>Id</label> <br> <input type="number" name="id"><br>
 		<div class="g-recaptcha" data-sitekey="6LcUks4UAAAAAIL-fzoauiSN0H59bTa6vrmzENm8"></div><br><br>
