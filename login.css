@@ -1,0 +1,177 @@
+.login
+{
+    background: rgba(44,62,80,0.7);
+    padding: 40px;
+    width: 350px;
+    margin: auto;
+    margin-top: 90px;
+    height: 700px;
+    margin-left: 180x;
+    border-radius:5%;
+}
+
+.g-recaptcha{
+    width:80%;
+}
+p
+{
+    font-size: 24px;
+    color:rgb(255, 255, 255);
+}
+
+label
+{
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+}
+
+input
+{
+    width: 240px;
+    text-align: center;
+    background: transparent;
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    padding: 10px 0;
+    outline: none;
+    border:transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+input[type=button]
+{
+    border: none;
+    width: 190px;
+    background: white;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input[type=submit]
+{
+    border: none;
+    width: 190px;
+    background: white;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+body
+{
+    font-family: 'Sulphur Point', sans-serif;
+    background-size: cover;
+}
+
+form
+{
+    width: 240px;
+    text-align: center;
+}
+
+a
+{
+    font-size: 22px;
+    color: rgb(223, 62, 123);
+    text-decoration: blink;
+    font-weight: bold;
+}
+h1
+{
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+}
+
+::-ms-input-placeholder 
+{
+  color: rgba(44,62,80,0.7);
+}
+
+::placeholder 
+{
+  color: rgba(44,62,80,0.7);
+}
+
+#msg 
+{
+    visibility: hidden;
+    min-width: 320px;
+    background-color:rgb(223, 62, 123);
+    color: #000;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    font-size: 17px;
+    margin: auto;
+    margin-top: 90px;
+    height: 550px;
+    margin-right:20px;
+}
+
+#msg.show 
+{
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein 
+{
+    from {top: 0; opacity: 0;} 
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein 
+{
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout 
+{
+    from {top: 30px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout 
+{
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+            
+@-webkit-keyframes autofill 
+{
+    to {
+            color: #666;
+            background: transparent;
+        }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus 
+{
+  -webkit-text-fill-color: #fff;
+  
+  transition: background-color 5000s ease-in-out 0s;
+}

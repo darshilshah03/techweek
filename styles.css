@@ -1,0 +1,53 @@
+.home
+{
+    background: rgba(44,62,80,0.7);
+    padding: 40px;
+    width: 250px;
+    margin: auto;
+    margin-top: 150px;
+    height: 200px;
+    margin-left: 180x;
+    border-radius:5%;
+}
+
+body
+{
+    font-family: 'Sulphur Point', sans-serif;
+    background-size: cover;
+}
+
+a
+{
+    font-size: 22px;
+    color: rgb(223, 62, 123);
+    text-decoration: blink;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 690px) {
+	.section{
+	width : 46%;
+	height: 42%;
+	}
+
+	.section h1{
+		font-size: 2.25em;
+	}
+	.section p{
+		font-size: 1.4em;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.section{
+		width: 29.33%;
+		height: 40%;
+	}
+
+	.section p{
+		font-size: 1em;
+	}
+
+
+
+}
