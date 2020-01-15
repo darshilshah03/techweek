@@ -72,7 +72,7 @@
 			header("Location:registerteam.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id1 = :i  or id2=:i  or id3 =:i or id4 = :i");
 		$stmt->execute(array(':i' => $_POST['memberid1']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -102,7 +102,7 @@
 			header("Location:registerteam.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id1 = :i  or id2=:i  or id3 =:i or id4 = :i");
 		$stmt->execute(array(':i' => $_POST['memberid2']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -119,7 +119,7 @@
 		}
 		if(strlen($_POST['memberid3'])>1)
 		{
-			$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id = :i ");
+			$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id1 = :i  or id2=:i  or id3 =:i or id4 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid3']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -154,7 +154,7 @@
 			return;
 		
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id1 = :i  or id2=:i  or id3 =:i or id4 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid4']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -186,9 +186,9 @@
 <p>
 	<div class="login">
 	<form method="post" action="team.php">
-		<p>Team name</p> <input type="text" name="name" value= <?= htmlentities($_POST['name']) ?> ><br>
-		<p> Leader name</p><input type="text" name="team" value= <?= htmlentities($_POST['team']) ?> ><br>
-		<p>Team size</p> <input type="number" name="size" min="1" max="4" value=<?= htmlentities($_POST['size']) ?> ><br>
+		<p>Team name</p> <input type="text" name="name" value= <?= htmlentities($_POST['name']) ?> disabled><br>
+		<p> Leader name</p><input type="text" name="team" value= <?= htmlentities($_POST['team']) ?> disabled><br>
+		<p>Team size</p> <input type="number" name="size" min="1" max="4" value=<?= htmlentities($_POST['size']) ?>disabled ><br>
 		<?php 
 		$size = $_POST['size'];
 		echo('<p>');
