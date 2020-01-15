@@ -131,6 +131,7 @@ input[type=submit]
 {
     width: 400px;
     text-align: center !important;
+    margin-left: -45px;
     display: inline-block;
     align-content: center;
 }
