@@ -10,7 +10,7 @@
 <title>Register</title>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-<body style="background-color:rgb(35, 41, 53);text-align:center">
+<body text="white" style="background-color:rgb(35, 41, 53);text-align:center">
 	<div class="section">
 <h1> Register </h1>
 <?php
@@ -29,11 +29,11 @@
 <p>
 	<div class="login">
 	<form method="post" action="single.php">
-		<p>Name</p> <br><input type="text" name="name"><br>
-		<p>Outstation</p> <br> <input type="radio" name="outst" value="1">Yes<br>
-						<input type="radio" name="outst" value="0" checked>No<br>
-		<p>Email</p> <br><input type="email" name="email"><br>
-		<p>Phone </p><br><input type="number" name="phone" ><br><br>
+		<input type="text" placeholder="Name" name="name" required=""><br><br>
+		<p><center>Outstation</center></p><input type="radio" name="outst" value="1">Yes<br>
+						<input type="radio" name="outst" value="0" checked>No<br><br><br>
+		<input type="email" placeholder="Email" name="email" required=""><br><br>
+		<input type="number" placeholder="Phone Number" name="phone" required=""><br><br>
 		<div class="g-recaptcha" data-sitekey="6LcUks4UAAAAAIL-fzoauiSN0H59bTa6vrmzENm8"></div><br><br>
 		<input type="submit" value = "Submit" name="submit" >
 	
