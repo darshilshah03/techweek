@@ -124,7 +124,7 @@ float: bottom;
 <div style="position: relative;" id="particles-js">
   <figure>
     <a href="http://t.me/Navigarebot" target="_blank">
-      <img alt="Naomi" src="/temp/Tele_logo.png"
+      <img alt="Naomi" src="temp/Tele_logo.png"
       width="150" height="170" align="bottom" class="fix">
       
    </a>
