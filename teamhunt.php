@@ -93,6 +93,7 @@
 		));
 		if(strlen($_POST['memberid2'])>1)
 		{
+			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
 			$stmt->execute(array(':i' => $_POST['memberid12']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
@@ -119,6 +120,7 @@
 		}
 		if(strlen($_POST['memberid3'])>1)
 		{
+			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
 			$stmt->execute(array(':i' => $_POST['memberid3']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
@@ -144,6 +146,7 @@
 		}
 		if(strlen($_POST['memberid4'])>1)
 		{
+			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
 			$stmt->execute(array(':i' => $_POST['memberid4']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
@@ -169,6 +172,7 @@
         }
         if(strlen($_POST['memberid5'])>1)
 		{
+			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
 			$stmt->execute(array(':i' => $_POST['memberid5']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)

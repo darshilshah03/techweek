@@ -10,7 +10,7 @@
 		}
 		if(strlen($_POST['size'])<1)
 		{
-			$_SESSION['error'] = "Enter techweek.hackathon size";
+			$_SESSION['error'] = "Enter team size";
 			header("Location: registeroffline.php");
 			return;
 		}
@@ -82,7 +82,7 @@
 			return;
 		}
 
-        $stmt = $pdo->query("SELECT * FROM techweek.csoffline ORDER BY team_id DESC LIMIT 1");
+        $stmt = $pdo->query("SELECT * FROM techweek.csoffline ORDER BY csoffline_team_id DESC LIMIT 1");
 		$user = $stmt->fetch();
 		$id = $user['csoffline_team_id'] +1;
 		$stmt = $pdo->prepare("INSERT INTO techweek.csoffline (team_name,id1,leader_name,csoffline_team_id) VALUES(:nam,:m1,:lead,:i)");
