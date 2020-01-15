@@ -10,7 +10,7 @@
 		}
 		if(strlen($_POST['size'])<1)
 		{
-			$_SESSION['error'] = "Enter techweek.hackathon size";
+			$_SESSION['error'] = "Enter team size";
 			header("Location: registeroffline.php");
 			return;
 		}
@@ -72,7 +72,7 @@
 			header("Location:registeroffline.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.csoffline WHERE id1 = :i  or id2=:i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.csoffline WHERE id1 = :i  or id2 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid1']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -82,7 +82,7 @@
 			return;
 		}
 
-        $stmt = $pdo->query("SELECT * FROM techweek.csoffline ORDER BY team_id DESC LIMIT 1");
+        $stmt = $pdo->query("SELECT * FROM techweek.csoffline ORDER BY csoffline_team_id DESC LIMIT 1");
 		$user = $stmt->fetch();
 		$id = $user['csoffline_team_id'] +1;
 		$stmt = $pdo->prepare("INSERT INTO techweek.csoffline (team_name,id1,leader_name,csoffline_team_id) VALUES(:nam,:m1,:lead,:i)");
@@ -103,7 +103,7 @@
 			header("Location:registeroffline.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.csoffline WHERE id1 = :i  or id2=:i  ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.csoffline WHERE id1 = :i  or id2 = :i  ");
 		$stmt->execute(array(':i' => $_POST['memberid2']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)

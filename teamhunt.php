@@ -63,7 +63,7 @@
 		$con = "pgsql:host=".$host.";port=".$port.";dbname=".$dbname;
 		$pdo = new PDO($con,$user,$pass);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			
+		$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid1']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
@@ -71,7 +71,7 @@
 			$_SESSION['error'] = "Invalid member id";
 			header("Location:registerhunt.php");
 			return;
-		}$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2=:i or id3 = :i or id4=:i or id5 = :i ");
+		}$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2 = :i or id3 = :i or id4 = :i or id5 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid1']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -93,6 +93,7 @@
 		));
 		if(strlen($_POST['memberid2'])>1)
 		{
+			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
 			$stmt->execute(array(':i' => $_POST['memberid12']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
@@ -101,7 +102,7 @@
 			header("Location:registerhunt.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2=:i or id3 = :i or id4=:i or id5 = :i");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2 = :i or id3 = :i or id4 = :i or id5 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid2']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -119,6 +120,7 @@
 		}
 		if(strlen($_POST['memberid3'])>1)
 		{
+			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
 			$stmt->execute(array(':i' => $_POST['memberid3']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
@@ -127,7 +129,7 @@
 			header("Location:registerhunt.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2=:i or id3 = :i or id4=:i or id5 = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2 = :i or id3 = :i or id4 = :i or id5 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid3']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -144,6 +146,7 @@
 		}
 		if(strlen($_POST['memberid4'])>1)
 		{
+			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
 			$stmt->execute(array(':i' => $_POST['memberid4']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
@@ -152,7 +155,7 @@
 			header("Location:registerhunt.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2=:i or id3 = :i or id4=:i or id5 = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2 = :i or id3 = :i or id4 = :i or id5 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid4']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -169,6 +172,7 @@
         }
         if(strlen($_POST['memberid5'])>1)
 		{
+			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
 			$stmt->execute(array(':i' => $_POST['memberid5']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
@@ -177,7 +181,7 @@
 			header("Location:registerhunt.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2=:i or id3 = :i or id4=:i or id5 = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2 = :i or id3 = :i or id4 = :i or id5 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid5']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
