@@ -210,9 +210,9 @@
 <p>
 	<div class="login">
 	<form method="post" action="teamhunt.php">
-		<label>Team name</label> <input type="text" name="name" value= <?= htmlentities($_POST['name']) ?> disabled><br>
-		<label> Leader name</label><input type="text" name="team" value= <?= htmlentities($_POST['team']) ?> disabled><br>
-		<label>Team size</label> <input type="number" name="size" min="1" max="5" value=<?= htmlentities($_POST['size']) ?> disabled><br>
+		<p>Team name</p> <input type="text" name="name" value= <?= htmlentities($_POST['name']) ?> disabled><br>
+		<p> Leader name</p><input type="text" name="team" value= <?= htmlentities($_POST['team']) ?> disabled><br>
+		<p>Team size</p> <input type="number" name="size" min="1" max="5" value=<?= htmlentities($_POST['size']) ?> disabled><br>
 		<?php 
 		$size = $_POST['size'];
 		echo('<p>');

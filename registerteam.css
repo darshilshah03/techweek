@@ -1,0 +1,184 @@
+.text-center 
+{
+    text-align: center;
+}
+
+.g-recaptcha
+{
+    align-content: center;
+    text-align: center !important;
+    width:300px;
+    display:inline-block;
+}
+
+#para
+{
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+}
+
+.section
+{
+    background: rgba(44,62,80,0.7);
+    padding: 50px;
+    width: 400px;
+    margin: auto;
+    margin-top: 10px;
+    height: 550px; 
+    border-radius:5%;
+    text-align: center !important;
+    align-content: center;
+}
+
+#mbody
+{
+    font-family: 'Sulphur Point', sans-serif;
+    background-size: cover;
+    text-align: center !important;
+}
+
+a
+{
+    font-size: 22px;
+    color: rgb(223, 62, 123);
+    text-decoration: blink;
+    font-weight: bold;
+    text-align: center !important;
+        
+}
+
+#name
+{
+    width: 240px;
+    text-align: center;
+    background: transparent;
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    padding: 10px 0;
+    outline: none;
+    border:transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-align: center !important;
+}
+
+#outst
+{
+    background: transparent;
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    padding: 10px 0;
+    outline: none;
+    border:transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-align: center !important;
+}
+
+#number
+{
+    width: 240px;
+    text-align: center;
+    background: transparent;
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    padding: 10px 0;
+    outline: none;
+    border:transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-align: center !important;
+}
+
+#email
+{
+    width: 240px;
+    text-align: center;
+    background: transparent;
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    padding: 10px 0;
+    outline: none;
+    border:transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-align: center !important;
+}
+
+input[type=submit]
+{
+    border: none;
+    width: 190px;
+    background: white;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Sulphur Point', sans-serif;
+    text-align: center !important;
+}
+
+#enterteam
+{
+    border: none;
+    width: 190px;
+    background: white;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Sulphur Point', sans-serif;
+    text-align: center !important;
+}
+
+
+.sgnupform
+{
+    width: 400px;
+    text-align: center !important;
+    margin-left: -45px;
+    display: inline-block;
+    align-content: center;
+}
+
+a
+{
+    font-size: 22px;
+    color: rgb(223, 62, 123);
+    text-decoration: blink;
+    font-weight: bold;
+    text-align: center !important;
+}
+
+#register
+{
+    font-size: 30px;
+    color: rgb(223, 62, 123);
+    font-weight: bold;
+    text-align: center !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus 
+{
+  -webkit-text-fill-color: #fff;
+  text-align: center;
+  transition: background-color 5000s ease-in-out 0s;
+}

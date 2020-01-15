@@ -29,11 +29,11 @@
 <p>
 	<div class="login">
 	<form method="post" action="single.php">
-		<label>Name</label> <br><input type="text" name="name"><br>
-		<label>Outstation</label> <br> <input type="radio" name="outst" value="1">Yes<br>
+		<p>Name</p> <br><input type="text" name="name"><br>
+		<p>Outstation</p> <br> <input type="radio" name="outst" value="1">Yes<br>
 						<input type="radio" name="outst" value="0" checked>No<br>
-		<label>Email</label> <br><input type="email" name="email"><br>
-		<label>Phone </label><br><input type="number" name="phone" ><br><br>
+		<p>Email</p> <br><input type="email" name="email"><br>
+		<p>Phone </p><br><input type="number" name="phone" ><br><br>
 		<div class="g-recaptcha" data-sitekey="6LcUks4UAAAAAIL-fzoauiSN0H59bTa6vrmzENm8"></div><br><br>
 		<input type="submit" value = "Submit" name="submit" >
 	
