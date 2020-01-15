@@ -125,7 +125,7 @@ float: bottom;
   <figure>
     <a href="http://t.me/Navigarebot" target="_blank">
       <img alt="Naomi" src="/temp/Tele_logo.png"
-      width=150 height=170 align="bottom" class="fix">
+      width="150" height="170" align="bottom" class="fix">
       
    </a>
   </figure>

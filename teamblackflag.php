@@ -72,6 +72,16 @@
 			header("Location:registerblackflag.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid1']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerblackflag.php");
+			return;
+		}
+
         $stmt = $pdo->query("SELECT * FROM techweek.blackflag ORDER BY blackflag_team_id DESC LIMIT 1");
 		$user = $stmt->fetch();
 		$id = $user['blackflag_team_id'] +1;
@@ -93,6 +103,16 @@
 			header("Location:registerblackflag.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid2']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerblackflag.php");
+			return;
+		}
+
 			$stmt = $pdo->prepare("UPDATE techweek.blackflag set id2 = :m2 where team_name = :nam AND id1 = :m1");
 			$stmt->execute(array(':m2' => $_POST['memberid2'],
 								':nam' =>$_POST['name'],
@@ -110,6 +130,16 @@
 			header("Location:registerblackflag.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid3']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerblackflag.php");
+			return;
+		}
+
 			$stmt = $pdo->prepare("UPDATE techweek.blackflag set id3 = :m3 where team_name = :nam AND id1 = :m1");
 			$stmt->execute(array(':m3' => $_POST['memberid3'],
 								 ':nam' =>$_POST['name'],

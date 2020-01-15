@@ -72,6 +72,15 @@
 			header("Location:registerteam.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid1']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerteam.php");
+			return;
+		}
 		$stmt = $pdo->query("SELECT * FROM techweek.hackathon ORDER BY team_id DESC LIMIT 1");
 		$user = $stmt->fetch();
 		$id = $user['id'] +1;
@@ -93,6 +102,15 @@
 			header("Location:registerteam.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid2']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerteam.php");
+			return;
+		}
 			$stmt = $pdo->prepare("UPDATE techweek.hackathon set id2 = :m2 where team_name = :nam AND id1 = :m1");
 			$stmt->execute(array(':m2' => $_POST['memberid2'],
 								':nam' =>$_POST['name'],
@@ -101,6 +119,15 @@
 		}
 		if(strlen($_POST['memberid3'])>1)
 		{
+			$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid3']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerteam.php");
+			return;
+		}
 			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid3']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -123,6 +150,16 @@
 		if($row===false)
 		{
 			$_SESSION['error'] = "Invalid member id";
+			header("Location:registerteam.php");
+			return;
+		
+		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.hackathon WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid4']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
 			header("Location:registerteam.php");
 			return;
 		}

@@ -72,6 +72,16 @@
 			header("Location:registeroffline.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.csoffline WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid1']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registeroffline.php");
+			return;
+		}
+
         $stmt = $pdo->query("SELECT * FROM techweek.csoffline ORDER BY team_id DESC LIMIT 1");
 		$user = $stmt->fetch();
 		$id = $user['csoffline_team_id'] +1;
@@ -90,6 +100,15 @@
 		if($row===false)
 		{
 			$_SESSION['error'] = "Invalid member id";
+			header("Location:registeroffline.php");
+			return;
+		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.csoffline WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid2']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
 			header("Location:registeroffline.php");
 			return;
 		}

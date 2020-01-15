@@ -72,7 +72,17 @@
 			header("Location:registerinfoquiz.php");
 			return;
 		}
-        $stmt = $pdo->query("SELECT * FROM techweek.informalquiz ORDER BY blackflag_team_id DESC LIMIT 1");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.informalquiz WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid1']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerinfoquiz.php");
+			return;
+		}
+
+        $stmt = $pdo->query("SELECT * FROM techweek.informalquiz ORDER BY infoquiz_team_id DESC LIMIT 1");
 		$user = $stmt->fetch();
 		$id = $user['infoquiz_team_id'] +1;
 		$stmt = $pdo->prepare("INSERT INTO techweek.informalquiz (team_name,id1,leader_name,infoquiz_team_id) VALUES(:nam,:m1,:lead,:id)");
@@ -92,6 +102,16 @@
 			header("Location:registerinfoquiz.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.informalquiz WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid2']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerinfoquiz.php");
+			return;
+		}
+
 			$stmt = $pdo->prepare("UPDATE techweek.informalquiz set id2 = :m2 where team_name = :nam AND id1 = :m1");
 			$stmt->execute(array(':m2' => $_POST['memberid2'],
 								':nam' =>$_POST['name'],
@@ -108,6 +128,16 @@
 			header("Location:registerinfoquiz.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.informalquiz WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid3']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerinfoquiz.php");
+			return;
+		}
+
 			$stmt = $pdo->prepare("UPDATE techweek.informalquiz set id3 = :m3 where team_name = :nam AND id1 = :m1");
 			$stmt->execute(array(':m3' => $_POST['memberid3'],
 								 ':nam' =>$_POST['name'],

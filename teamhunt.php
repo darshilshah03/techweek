@@ -71,7 +71,16 @@
 			$_SESSION['error'] = "Invalid member id";
 			header("Location:registerhunt.php");
 			return;
+		}$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid1']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerhunt.php");
+			return;
 		}
+
 		$stmt = $pdo->query("SELECT * FROM techweek.treasurehunt ORDER BY treasurehunt_team_id DESC LIMIT 1");
 		$user = $stmt->fetch();
 		$id = $user['treasurehunt_team_id'] +1;
@@ -92,6 +101,16 @@
 			header("Location:registerhunt.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid2']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerhunt.php");
+			return;
+		}
+
 			$stmt = $pdo->prepare("UPDATE techweek.treasurehunt set id2 = :m2 where team_name = :nam AND id1 = :m1");
 			$stmt->execute(array(':m2' => $_POST['memberid2'],
 								':nam' =>$_POST['name'],
@@ -108,6 +127,16 @@
 			header("Location:registerhunt.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid3']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerhunt.php");
+			return;
+		}
+
 			$stmt = $pdo->prepare("UPDATE techweek.treasurehunt set id3 = :m3 where team_name = :nam AND id1 = :m1");
 			$stmt->execute(array(':m3' => $_POST['memberid3'],
 								 ':nam' =>$_POST['name'],
@@ -123,6 +152,16 @@
 			header("Location:registerhunt.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid4']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerhunt.php");
+			return;
+		}
+
 			$stmt = $pdo->prepare("UPDATE techweek.treasurehunt set id4 = :m4 where team_name = :nam AND id1 = :m1");
 			$stmt->execute(array(':m4' => $_POST['memberid4'],
 								':nam' =>$_POST['name'],
@@ -138,6 +177,16 @@
 			header("Location:registerhunt.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id = :i ");
+		$stmt->execute(array(':i' => $_POST['memberid5']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registerhunt.php");
+			return;
+		}
+
 			$stmt = $pdo->prepare("UPDATE techweek.treasurehunt set id5 = :m5 where team_name = :nam AND id1 = :m1");
 			$stmt->execute(array(':m5' => $_POST['memberid5'],
 								':nam' =>$_POST['name'],
