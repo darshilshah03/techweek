@@ -8,10 +8,9 @@
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	        <link rel="stylesheet" type="text/css" href="registerteam.css">    <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
 </head>
-<body style="background-color:rgb(35, 41, 53);text-align:center">
+<body style="background-color:rgb(35, 41, 53);text-align:center" id="mbody">
 
 <div class= "section">
-<h1> Register </h1>
 <?php
 		session_start();
 		if(isset($_SESSION['error']))
@@ -27,10 +26,11 @@
 	?>
 <p>
 	<div class="login">
-	<form method="post" action="teamoffline.php">
-		<p>Team name </p><input type="text" name="name" ><br>
-		<p> Leader name</p><input type="text" name="team"><br>
-		<p>Team size</p><input type="number" name="size" min="1" max="2">
+	<form method="post" action="teamoffline.php" name="regform">
+	<h1 id="register">Register</h1><br>
+		<p id="para">Team name </p><input type="text" name="team" id="name" ><br><br>
+		<p id="para"> Leader name</p><input type="text" name="team" id="para"><br><br>
+		<p id="para">Team size</p><input type="number" name="size" min="1" max="2" id="number"><br><br>
 		<button name="add" >Enter</button>
 	</div>
 </p>
