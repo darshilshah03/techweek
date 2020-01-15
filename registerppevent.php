@@ -30,8 +30,8 @@
 	<div class="login">
 	<form method="post" action="singleppevent.php" name="regform">
 	<h1 id="register">Register</h1><br>
-		<p id="para">Name</p><input type="text" name="name" id="name"><br><br>
-		<p id="para">Id</p><input type="number" name="size"  min="" max="" id="number"><br><br>
+		<p id="para">Name</p><input type="text" name="team" id="name"><br><br>
+		<p id="para">Id</p><input type="number" name="size" id="number"><br><br>
 		<div class="g-recaptcha" data-sitekey="6LcUks4UAAAAAIL-fzoauiSN0H59bTa6vrmzENm8"></div><br><br>
 		<input type="submit" value = "Submit" name="submit" >
 	
