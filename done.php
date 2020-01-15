@@ -15,10 +15,14 @@
 ?>
 <html>
 <head>
+<center>
 <link rel="stylesheet" type="text/css" href="login.css">
     <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    </center>
 </head>
 <body>
+<center>
     <a href="index.php">Go back</a>
+    </center>
 </body>
