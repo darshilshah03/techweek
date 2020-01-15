@@ -72,7 +72,7 @@
 			header("Location:registerblackflag.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id1 = :i  or id2=:i or id3 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid1']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -103,7 +103,7 @@
 			header("Location:registerblackflag.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id1 = :i  or id2=:i or id3 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid2']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -130,7 +130,7 @@
 			header("Location:registerblackflag.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id1 = :i or id2=:i or id3 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid3']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)

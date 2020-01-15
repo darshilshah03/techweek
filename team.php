@@ -83,7 +83,7 @@
 		}
 		$stmt = $pdo->query("SELECT * FROM techweek.hackathon ORDER BY team_id DESC LIMIT 1");
 		$user = $stmt->fetch();
-		$id = $user['id'] +1;
+		$id = $user['team_id'] +1;
 		$stmt = $pdo->prepare("INSERT INTO techweek.hackathon (team_name,id1,leader_name,team_id) VALUES(:nam,:m1,:lead,:i)");
 		$stmt->execute(array(
 			':nam' => $_POST['name'],
