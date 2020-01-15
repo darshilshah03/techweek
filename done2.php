@@ -7,7 +7,7 @@
 		}
 		if(isset($_SESSION['success']))
 		{
-			echo('<p style="color:green">'.$_SESSION['success'].'</p>');
+			echo('<p style="color:green"><center>'.$_SESSION['success'].'</center></p>');
             unset($_SESSION['success']);
         }
     echo(<center>'Your team registration id is '.$_SESSION['teamid']</center>);
