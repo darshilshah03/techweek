@@ -7,10 +7,10 @@
 		}
 		if(isset($_SESSION['success']))
 		{
-			echo('<p style="color:green"><center>'.$_SESSION['success'].'</center></p>');
+			echo('<p style="color:green">'.$_SESSION['success'].'</p>');
             unset($_SESSION['success']);
         }
-    echo(<center>'Your team registration id is '.$_SESSION['teamid']</center>);
+    echo('Your team registration id is '.$_SESSION['teamid']);
     unset($_SESSION['teamid']);
 ?>
 <html>
@@ -21,6 +21,6 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </p>
 </head>
-<body><center>
+<body bgcolor="E8A87C"><center>
     <a href="index.php">Go back</a></center>
 </body>
