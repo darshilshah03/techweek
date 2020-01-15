@@ -24,3 +24,4 @@
 <body bgcolor="E8A87C"><center>
     <a href="index.php">Go back</a></center>
 </body>
+</html>
