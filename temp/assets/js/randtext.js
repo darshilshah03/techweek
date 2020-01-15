@@ -2,7 +2,7 @@
   		function randtext(id,x,flag)
   		{
             var container = $(id).get(0);
-            var textToWrite = ' N A V I G A R E ';
+            var textToWrite = 'NAVIGARE';
             //Ǝ
             var i = 0;
             var progress = 0;

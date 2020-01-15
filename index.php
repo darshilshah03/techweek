@@ -122,13 +122,13 @@ float: bottom;
   
 <!-- particles.js container -->
 <div style="position: relative;" id="particles-js">
-  <figure>
+  <!-- <figure>
     <a href="http://t.me/Navigarebot" target="_blank">
       <img alt="Naomi" src="temp/Tele_logo.png"
       width="150" height="170" align="bottom" class="fix">
       
    </a>
-  </figure>
+  </figure> -->
   
   <button class="button button1" id="Enter"></button>
   <script type="text/javascript">
