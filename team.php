@@ -186,9 +186,9 @@
 <p>
 	<div class="login">
 	<form method="post" action="team.php">
-		<p>Team name</p> <input type="text" name="name" value= <?= htmlentities($_POST['name']) ?> disabled><br>
-		<p> Leader name</p><input type="text" name="team" value= <?= htmlentities($_POST['team']) ?> disabled><br>
-		<p>Team size</p> <input type="number" name="size" min="1" max="4" value=<?= htmlentities($_POST['size']) ?> disabled><br>
+		<p>Team name</p> <input type="text" name="name" value= <?= htmlentities($_POST['name']) ?> ><br>
+		<p> Leader name</p><input type="text" name="team" value= <?= htmlentities($_POST['team']) ?> ><br>
+		<p>Team size</p> <input type="number" name="size" min="1" max="4" value=<?= htmlentities($_POST['size']) ?> ><br>
 		<?php 
 		$size = $_POST['size'];
 		echo('<p>');
