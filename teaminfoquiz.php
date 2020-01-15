@@ -72,7 +72,7 @@
 			header("Location:registerinfoquiz.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.informalquiz WHERE id1 = :i  or id2=:i or id3 = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.informalquiz WHERE id1 = :i  or id2 = :i or id3 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid1']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -102,7 +102,7 @@
 			header("Location:registerinfoquiz.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.informalquiz WHERE id1 = :i  or id2=:i or id3 = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.informalquiz WHERE id1 = :i  or id2 = :i or id3 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid2']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -128,7 +128,7 @@
 			header("Location:registerinfoquiz.php");
 			return;
 		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.informalquiz WHERE id1 = :i  or id2=:i or id3 = :i ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.informalquiz WHERE id1 = :i  or id2 = :i or id3 = :i ");
 		$stmt->execute(array(':i' => $_POST['memberid3']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
@@ -161,7 +161,7 @@
 <p>
 	<div class="login">
 	<form method="post" action="teaminfoquiz.php">
-		<p>Team name</p> <input type="text" name="name" value= <?= htmlentities($_POST['name']) ?>disabled ><br>
+		<p>Team name</p> <input type="text" name="name" value= <?= htmlentities($_POST['name']) ?> disabled ><br>
 		<p> Leader name</p><input type="text" name="team" value= <?= htmlentities($_POST['team']) ?> disabled><br>
 		<p>Team size</p> <input type="number" name="size" min="1" max="4" value=<?= htmlentities($_POST['size']) ?> disabled><br>
 		<?php 
