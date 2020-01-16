@@ -1,21 +1,20 @@
-<center>
 <?php 
     session_start();
     if(isset($_SESSION['error']))
 		{
             echo '<body style="background-color:#CAFAFE">';
-            echo ('<p style="color:red">'.$_SESSION['error'].'</p>');
+            echo ('<p style="color:red" align="center">'.$_SESSION['error'].'</p>');
 			unset($_SESSION['error']);
 		}
 		if(isset($_SESSION['success']))
 		{
             echo '<body style="background-color:#CAFAFE">';
-			echo('<p style="color:green">'.$_SESSION['success'].'</p>');
+			echo('<p style="color:green" align=center">'.$_SESSION['success'].'</p>');
             unset($_SESSION['success']);
         }
     echo('Your registration id is '.$_SESSION['id']);
     unset($_SESSION['id']);
-?></center>
+?>
 <html>
 <head>
 <center>
