@@ -156,7 +156,7 @@
 <head>
 	<title>Register </title>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<link rel="stylesheet" type="text/css" href="css/registermagna.css">
+	<link rel="stylesheet" type="text/css" href="registerteam.css">
     <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
 </head>
 <body style="background-color:rgb(35, 41, 53);text-align:center" id="mbody">
