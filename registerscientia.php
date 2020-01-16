@@ -11,9 +11,8 @@
 <title>Register</title>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-<body style="background-color:rgb(35, 41, 53);text-align:center">
+<body style="background-color:rgb(35, 41, 53);text-align:center" id="mbody">
 	<div class="section">
-<h1> Register </h1>
 <?php
 		session_start();
 		if(isset($_SESSION['error']))
@@ -29,9 +28,10 @@
 	?>
 <p>
 	<div class="login">
-	<form method="post" action="singlescientia.php">
-		<p>Name</p> <br><input type="text" name="name"><br>
-		<p>Id</p> <br> <input type="number" name="id"><br>
+	<form method="post" action="singlescientia.php" name="regform">
+	<h1 id="register">Register</h1><br>
+		<p id="para">Name</p><input type="text" name="name" id="name"><br><br>
+		<p id="para">Id</p><input type="number" name="size" min="1" id="number"><br><br>
 		<div class="g-recaptcha" data-sitekey="6LcUks4UAAAAAIL-fzoauiSN0H59bTa6vrmzENm8"></div><br><br>
 		<input type="submit" value = "Submit" name="submit" >
 	
