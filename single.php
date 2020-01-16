@@ -59,7 +59,7 @@ function CheckCaptcha($userResponse) {
 		$con = "pgsql:host=".$host.";port=".$port.";dbname=".$dbname;
 		$pdo = new PDO($con,$user,$pass);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE email = : em ");
+		$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE email = :em ");
 		$stmt->execute(array(':em' => $_POST['email']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row!==false)
