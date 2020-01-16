@@ -38,6 +38,8 @@
 		            <p id="para">Outstation</p>
                     <input type="radio" name="outst" value="1"><p id="para">Yes</p>
 			        <input type="radio" name="outst" value="0" checked><p id="para">No</p><br>
+					<p id="para"> College</p>
+					<input type="text" name ="college" id="name"><br><br>
                     <div class="text-center">
 		              <div class="g-recaptcha" data-sitekey="6LcUks4UAAAAAIL-fzoauiSN0H59bTa6vrmzENm8"></div><br><br>
                     </div>

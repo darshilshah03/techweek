@@ -77,7 +77,7 @@ function CheckCaptcha($userResponse) {
 	}
 	else{
 		$_SESSION['error'] = "Enter all the fields";
-		header("Location: registersingle.php");
+		header("Location: registerppevent.php");
 		return;
 	}
 ?>
