@@ -65,7 +65,7 @@ function CheckCaptcha($userResponse) {
 			header("Location:registermagna.php");
 			return;
 		}
-		$stmt = $pdo->prepare("INSERT INTO techweek.magna  (name,magna_participant_id) VALUES (:nam,:id)");
+		$stmt = $pdo->prepare("INSERT INTO techweek.magna  (name,manga_participant_id) VALUES (:nam,:id)");
 		$stmt->execute(array(
 			':nam' => $_POST['name'],
 			':id' => $_POST['id']
