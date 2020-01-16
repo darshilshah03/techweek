@@ -35,7 +35,7 @@
 		<p id="para">Id</p><input type="number" name="id" id="name"><br><br>
 		<br><br>
 		<div class="g-recaptcha" data-sitekey="6LcUks4UAAAAAIL-fzoauiSN0H59bTa6vrmzENm8"></div><br><br>
-		<input type="submit" value = "Submit" name="submit" >
+		<input type="submit" value = "Submit" name="submit">
 	
 	</form>
 	</div>
