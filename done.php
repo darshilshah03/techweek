@@ -2,13 +2,13 @@
     session_start();
     if(isset($_SESSION['error']))
 		{
-            echo '<body style="background-color:CAFAFE">';
+            echo '<body style="background-color:#CAFAFE">';
             echo ('<p style="color:red">'.$_SESSION['error'].'</p>');
 			unset($_SESSION['error']);
 		}
 		if(isset($_SESSION['success']))
 		{
-            echo '<body style="background-color:CAFAFE">';
+            echo '<body style="background-color:#CAFAFE">';
 			echo('<p style="color:green">'.$_SESSION['success'].'</p>');
             unset($_SESSION['success']);
         }
