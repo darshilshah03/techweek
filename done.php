@@ -24,7 +24,7 @@
     </center>
 </head>
 <body>
-<center><br><br><b><br><br><br><br><br><br><br>
+<center><br><br><b><br><br><br><br>
     <a href="index.php">Go back</a>
     </center>
 </body>
