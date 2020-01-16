@@ -12,7 +12,7 @@
 			echo('<p style="color:green" align="center">'.$_SESSION['success'].'</p>');
             unset($_SESSION['success']);
         }
-    echo('<p align="center"> Your registration id is '.$_SESSION['id'].'</p>');
+    echo('<p style="color:black" align="center"> Your registration id is '.$_SESSION['id'].'</p>');
     unset($_SESSION['id']);
 ?>
 <html>
