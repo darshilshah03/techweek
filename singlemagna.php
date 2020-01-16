@@ -65,6 +65,15 @@ function CheckCaptcha($userResponse) {
 			header("Location:registermagna.php");
 			return;
 		}
+		$stmt = $pdo->prepare("SELECT * FROM techweek.magna where manga_participant_id = :i");
+		$stmt->execute(array(':i' => $_POST['id']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if(row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location: registermagna.php");
+			return;
+		}
 		$stmt = $pdo->prepare("INSERT INTO techweek.magna  (name,manga_participant_id) VALUES (:nam,:id)");
 		$stmt->execute(array(
 			':nam' => $_POST['name'],
