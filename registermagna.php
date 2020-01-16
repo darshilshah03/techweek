@@ -32,7 +32,7 @@
 	<form method="post" action="singlepmagna.php" name="regform">
 	<h1 id="register">Register</h1><br>
 		<p id="para"> Name </p><input type="text" name="team" id="name"><br><br>
-		<p id="para">Leader Name</p><input type="text" name="team" id="name"><br><br>
+		<p id="para">Id</p><input type="number" name="id" id="name"><br><br>
 		<br><br>
 		<div class="g-recaptcha" data-sitekey="6LcUks4UAAAAAIL-fzoauiSN0H59bTa6vrmzENm8"></div><br><br>
 		<input type="submit" value = "Submit" name="submit" >
