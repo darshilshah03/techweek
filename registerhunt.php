@@ -30,8 +30,8 @@
 	<h1 id="register">Register</h1><br>
 		<p id="para">Team name </p><input type="text" name="team" id="name" ><br><br>
 		<p id="para"> Leader name</p><input type="text" name="team" id="name"><br><br>
-		<p id ="para">Team size</p><input type="number" name="size" min="1" max="5" id ="number"><br><br>
-		<button name="add" >Enter</button>
+		<p id ="para">Team size</p><input type="number" name="size" min="1" max="5" id ="name"><br><br>
+		<input type="submit" value = "Submit" name="submit">
 	</div>
 </p>
 

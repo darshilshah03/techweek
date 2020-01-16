@@ -5,7 +5,7 @@
 <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="registersingle.css">
+        <link rel="stylesheet" type="text/css" href="css/registersingle.css">
         <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
 <title>Register</title>
 <script src='https://www.google.com/recaptcha/api.js'></script>
