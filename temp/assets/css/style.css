@@ -117,7 +117,7 @@ body , #particles-js {
 
 
 #div1{
-  position: absolute; left: 50%; top: 40%; transform: translate(-50%,-50%); color: white; display: none; font-size: 5em ; font-family: roboto; z-index: 1; padding-bottom: 15px; 
+  position: absolute; left: 50%; top: 40%; transform: translate(-50%,-50%); color: white; display: none; font-size: 5em ; font-family: 'Sulphur Point', sans-serif; z-index: 1; padding-bottom: 15px; 
 }
 
 #login{
@@ -197,7 +197,7 @@ body , #particles-js {
   @media(max-width: 351px){
 
 #div1{
-  position: absolute; left: 50%; top: 40%; transform: translate(-50%,-50%); color: white; display: none; font-size: 1em ; font-family: roboto; z-index: 100; padding-bottom: 15px; 
+  position: absolute; left: 50%; top: 40%; transform: translate(-50%,-50%); color: white; display: none; font-size: 1em ; font-family: 'Sulphur Point', sans-serif; z-index: 100; padding-bottom: 15px; 
 }
 
 #login{
