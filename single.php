@@ -59,6 +59,15 @@ function CheckCaptcha($userResponse) {
 		$con = "pgsql:host=".$host.";port=".$port.";dbname=".$dbname;
 		$pdo = new PDO($con,$user,$pass);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE email = : em ");
+		$stmt->execute(array(':em' => $_POST['email']));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($row!==false)
+		{
+			$_SESSION['error'] = "Already registered";
+			header("Location:registersingle.php");
+			return;
+		}
 		$stmt = $pdo->query("SELECT * FROM techweek.participant ORDER BY id DESC LIMIT 1");
 		$user = $stmt->fetch();
 		$id = $user['id'] +1;
