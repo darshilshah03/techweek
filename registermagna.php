@@ -33,7 +33,7 @@
 	<h1 id="register">Register</h1><br>
 		<p id="para"> Name </p><input type="text" name="team" id="name"><br><br>
 		<p id="para">Leader Name</p><input type="text" name="team" id="name"><br><br>
-		<p id="para">Team size</p><input type="number" name="size" min="1" max="4" id="number"><br><br>
+		<br><br>
 		<div class="g-recaptcha" data-sitekey="6LcUks4UAAAAAIL-fzoauiSN0H59bTa6vrmzENm8"></div><br><br>
 		<input type="submit" value = "Submit" name="submit" >
 	
