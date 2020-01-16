@@ -2,17 +2,17 @@
     session_start();
     if(isset($_SESSION['error']))
 		{
-            echo '<body style="background-color:#E3E2DF">';
+            //echo '<body style="background-color:#E3E2DF">';
 			echo ('<p style="color:red" align="center">'.$_SESSION['error'].'</p>');
 			unset($_SESSION['error']);
 		}
 		if(isset($_SESSION['success']))
 		{
-            echo '<body style="background-color:#E3E2DF">';
+            //echo '<body style="background-color:#E3E2DF">';
 			echo('<p style="color:green" align="center">'.$_SESSION['success'].'</p>');
             unset($_SESSION['success']);
         }
-    echo('<p style="color:black" align="center"> Your team registration id is '.$_SESSION['teamid']'</p>');
+    echo('Your team registration id is '.$_SESSION['teamid']);
     unset($_SESSION['teamid']);
 ?>
 <html>
