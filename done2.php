@@ -21,7 +21,7 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </p>
 </head>
-<body bgcolor="E8A87C"><center>
+<body bgcolor="#ADADAD"><center>
     <a href="index.php">Go back</a></center>
 </body>
 </html>
