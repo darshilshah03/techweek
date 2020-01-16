@@ -1,4 +1,4 @@
-    <?php 
+<style="text-align:center;"><?php 
     session_start();
     if(isset($_SESSION['error']))
 		{
@@ -14,7 +14,7 @@
         }
     echo('Your registration id is '.$_SESSION['id']);
     unset($_SESSION['id']);
-?>
+?></style>
 <html>
 <head>
 <center>
@@ -24,7 +24,7 @@
     </center>
 </head>
 <body>
-<center>
+<center><br><br><b><br><br><br><br></br><br><br><br><br>
     <a href="index.php">Go back</a>
     </center>
 </body>
