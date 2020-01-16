@@ -9,7 +9,7 @@
 		if(isset($_SESSION['success']))
 		{
             echo '<body style="background-color:#CAFAFE">';
-			echo('<p style="color:green" align=center">'.$_SESSION['success'].'</p>');
+			echo('<p style="color:green" align="center">'.$_SESSION['success'].'</p>');
             unset($_SESSION['success']);
         }
     echo('Your registration id is '.$_SESSION['id']);
