@@ -29,7 +29,7 @@
 	?>
 <p>
 	<div class="login">
-	<form method="post" action="singlepmagna.php" name="regform">
+	<form method="post" action="singlemagna.php" name="regform">
 	<h1 id="register">Register</h1><br>
 		<p id="para"> Name </p><input type="text" name="team" id="name"><br><br>
 		<p id="para">Id</p><input type="number" name="id" id="name"><br><br>
