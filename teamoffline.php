@@ -134,11 +134,12 @@
 </head>
 <body style="background-color:rgb(35, 41, 53);text-align:center">
 <p>
+    <div class="section">
 	<div class="login">
 	<form method="post" action="teamoffline.php">
-		<p>Team name</p> <input type="text" name="name" value= <?= htmlentities($_POST['name']) ?> disabled><br>
-		<p> Leader name</p><input type="text" name="team" value= <?= htmlentities($_POST['team']) ?> disabled><br>
-		<p>Team size</p> <input type="number" name="size" min="1" max="4" value=<?= htmlentities($_POST['size']) ?> disabled><br>
+		<p id="para">Team name</p> <input type="text" name="name" id="name" value= <?= htmlentities($_POST['name']) ?> disabled><br>
+		<p id="para">Leader name</p><input type="text" name="team" id="name" value= <?= htmlentities($_POST['team']) ?> disabled><br>
+		<p id="para">Team size</p> <input type="number" name="size" id="name" min="1" max="4" value=<?= htmlentities($_POST['size']) ?> disabled><br>
 		<?php 
 		$size = $_POST['size'];
 		echo('<p>');
@@ -151,6 +152,7 @@
 		<br><br><input type="submit" value = "Submit" name='submit2' >
 	</form>
 	</div>
+    </div>    
 </p>
 </body>
 </html>
