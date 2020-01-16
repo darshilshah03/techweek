@@ -12,7 +12,7 @@
 			echo('<p style="color:green" align="center">'.$_SESSION['success'].'</p>');
             unset($_SESSION['success']);
         }
-    echo('Your team registration id is '.$_SESSION['teamid']);
+    echo('<p style="color:black" align="center"> Your team registration id is '.$_SESSION['teamid'].'</p>');
     unset($_SESSION['teamid']);
 ?>
 <html>
@@ -23,7 +23,7 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
     </center>
 </head>
-<body>
+<body bgcolor="#E3E2DF">
 <center><br><br><b><br><br><br><br>
     <a href="index.php">Go back</a>
     </center>
