@@ -179,6 +179,8 @@
 <head>
 	<title>Register </title>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/registermagna.css">
     <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
 </head>
@@ -202,6 +204,7 @@
 		<br><br><input type="submit" value = "Submit" name='submit2' >
 	</form>
 	</div>
+        <script src="js/bootstrap.js"></script>
     </div>
 </p>
 </body>
