@@ -68,7 +68,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registerhunt.php");
 			return;
 		}$stmt = $pdo->prepare("SELECT * FROM techweek.treasurehunt WHERE id1 = :i  or id2 = :i or id3 = :i or id4 = :i or id5 = :i ");
@@ -98,7 +98,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registerhunt.php");
 			return;
 		}
@@ -125,7 +125,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registerhunt.php");
 			return;
 		}
@@ -151,7 +151,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registerhunt.php");
 			return;
 		}
@@ -177,7 +177,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registerhunt.php");
 			return;
 		}

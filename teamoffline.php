@@ -68,7 +68,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registeroffline.php");
 			return;
 		}
@@ -99,7 +99,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registeroffline.php");
 			return;
 		}
