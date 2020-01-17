@@ -156,9 +156,9 @@ $(document).ready(function(){
   </p>
 </div>
   
-  <a href="https://techweekapp1.herokuapp.com/registersingle.php"><button class="button" id="login">User Registration</button></a>
+  <a href="https://navigare.herokuapp.com/registersingle.php"><button class="button" id="login">User Registration</button></a>
   
-  <a href="https://techweekapp1.herokuapp.com/event.html"><button class="button"  id="register">Event Registration</button></a>
+  <a href="https://navigare.herokuapp.com/event.html"><button class="button"  id="register">Event Registration</button></a>
 
   <div class="footer"  style="position: absolute; left: 50% ; top: 90%; transform: translate(-50%,0);   display: block; color: white; z-index: 1;"><font size="+2"><a href="https://t.me/Navigarebot" target="_blank"><br>Talk to <b>Naomi</b> (Telegram)</a></font><br><center>By IEEE</center></div>
 
