@@ -68,7 +68,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id or User not Registered";
+			$_SESSION['error'] = "Invalid member id or User not Registered"+<br>+"echo " <a href="http://www.website.com/page.html">Go to User Registration first</a>";";
 			header("Location:registerteam.php");
 			return;
 		}
