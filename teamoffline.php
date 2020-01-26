@@ -140,8 +140,8 @@
     <div class="section">
 	<div class="login">
 	<form method="post" action="teamoffline.php">
-		<p id="para">Team name</p> <input type="text" name="name" id="name" value= <?= htmlentities($_POST['name']) ?> disabled><br>
-		<p id="para">Leader name</p><input type="text" name="team" id="name" value= <?= htmlentities($_POST['team']) ?> disabled><br>
+		<p id="para">Team name</p> <input type="text" name="name" id="name" value= "<?= htmlentities($_POST['name']) ?>" disabled><br>
+		<p id="para">Leader name</p><input type="text" name="team" id="name" value= "<?= htmlentities($_POST['team']) ?>" disabled><br>
 		<p id="para">Team size</p> <input type="number" name="size" id="name" min="1" max="4" value=<?= htmlentities($_POST['size']) ?> disabled><br>
 		<?php 
 		$size = $_POST['size'];
