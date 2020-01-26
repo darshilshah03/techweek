@@ -218,9 +218,9 @@
     <div class="section">
 	<div class="login">
 	<form method="post" action="teamhunt.php">
-		<p id="para">Team name</p> <input type="text" name="name" id="name" value= <?= htmlentities($_POST['name']) ?> disabled><br>
-		<p id="para">Leader name</p><input type="text" name="team" id="name" value= <?= htmlentities($_POST['team']) ?> disabled><br>
-		<p id="para">Team size</p> <input type="number" name="size" id="name" min="1" max="5" value=<?= htmlentities($_POST['size']) ?> disabled><br>
+		<p id="para">Team name</p> <input type="text" name="name" id="name" value= <?= htmlentities($_POST['name']) ?> ><br>
+		<p id="para">Leader name</p><input type="text" name="team" id="name" value= <?= htmlentities($_POST['team']) ?> ><br>
+		<p id="para">Team size</p> <input type="number" name="size" id="name" min="1" max="5" value=<?= htmlentities($_POST['size']) ?>><br>
 		<?php 
 		$size = $_POST['size'];
 		echo('<p>');
