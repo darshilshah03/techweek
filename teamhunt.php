@@ -94,7 +94,7 @@
 		if(strlen($_POST['memberid2'])>1)
 		{
 			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
-			$stmt->execute(array(':i' => $_POST['memberid12']));
+			$stmt->execute(array(':i' => $_POST['memberid2']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
