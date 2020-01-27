@@ -68,7 +68,7 @@ function CheckCaptcha($userResponse) {
 		$stmt = $pdo->prepare("SELECT * FROM techweek.scientia where scientia_participant_id = :i");
 		$stmt->execute(array(':i' => $_POST['id']));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
-		if(row!==false)
+		if($row!==false)
 		{
 			$_SESSION['error'] = "Already registered";
 			header("Location: registerscientia.php");
