@@ -82,111 +82,12 @@
 		$stmt = $pdo->prepare("INSERT INTO techweek.blackflag (leader_name,id1) VALUES(:nam,:m1)");
 		$stmt->execute(array(
 			':nam' => $_POST['name'],
-<<<<<<< HEAD
 			':m1' => $_POST['id']
 		));
 		
-=======
-			':m1' => $_POST['memberid1'],
-            ':lead' => $_POST['team'],
-            ':id' => $id
-		));
-		if(strlen($_POST['memberid2'])>1)
-		{
-			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
-		$stmt->execute(array(':i' => $_POST['memberid2']));
-		$row = $stmt->fetch(PDO::FETCH_ASSOC);
-		if($row===false)
-		{
-			$_SESSION['error'] = "Invalid member id or User not Registered";
-			header("Location:registerblackflag.php");
-			return;
-		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id1 = :i  or id2=:i or id3 = :i ");
-		$stmt->execute(array(':i' => $_POST['memberid2']));
-		$row = $stmt->fetch(PDO::FETCH_ASSOC);
-		if($row!==false)
-		{
-			$_SESSION['error'] = "Already registered";
-			header("Location:registerblackflag.php");
-			return;
-		}
-
-			$stmt = $pdo->prepare("UPDATE techweek.blackflag set id2 = :m2 where team_name = :nam AND id1 = :m1");
-			$stmt->execute(array(':m2' => $_POST['memberid2'],
-								':nam' =>$_POST['name'],
-								':m1' => $_POST['memberid1']
-		));
-		}
-		if(strlen($_POST['memberid3'])>1)
-		{
-			$stmt = $pdo->prepare("SELECT * FROM techweek.participant WHERE id = :i ");
-		$stmt->execute(array(':i' => $_POST['memberid3']));
-		$row = $stmt->fetch(PDO::FETCH_ASSOC);
-		if($row===false)
-		{
-			$_SESSION['error'] = "Invalid member id or User not Registered";
-			header("Location:registerblackflag.php");
-			return;
-		}
-		$stmt = $pdo->prepare("SELECT * FROM techweek.blackflag WHERE id1 = :i or id2=:i or id3 = :i ");
-		$stmt->execute(array(':i' => $_POST['memberid3']));
-		$row = $stmt->fetch(PDO::FETCH_ASSOC);
-		if($row!==false)
-		{
-			$_SESSION['error'] = "Already registered";
-			header("Location:registerblackflag.php");
-			return;
-		}
-
-			$stmt = $pdo->prepare("UPDATE techweek.blackflag set id3 = :m3 where team_name = :nam AND id1 = :m1");
-			$stmt->execute(array(':m3' => $_POST['memberid3'],
-								 ':nam' =>$_POST['name'],
-								':m1' => $_POST['memberid1']));
-		}
->>>>>>> 51033ccf636d84077f02fc20b11de3d0cdbf7a7d
         $_SESSION['success'] = "Registration successful";
         $_SESSION['id'] = $_POST['id'];
 		header("Location: done.php");
 		return;
 	}
 ?>
-<<<<<<< HEAD
-=======
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Register </title>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <script src="js/bootstrap.js"></script>
-	<link rel="stylesheet" type="text/css" href="registerteam.css">
-    <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
-    
-</head>
-<body style="background-color:rgb(35, 41, 53);text-align:center" id="mbody">
-<p>
-    <div class="section">
-	<div class="login">
-	<form method="post" action="teamblackflag.php">
-		<p id="para">Team name</p> <input type="text" name="name" id="name" value= <?= htmlentities($_POST['name']) ?> ><br>
-		<p id="para">Leader name</p><input type="text" name="team" id="name" value= <?= htmlentities($_POST['team']) ?> ><br>
-		<p id="para">Team size</p> <input type="number" name="size" id="name" min="1" max="4" value=<?= htmlentities($_POST['size']) ?> ><br>
-		<?php 
-		$size = $_POST['size'];
-		echo('<p>');
-		for($i=1;$i<=$size;$i++){
-			echo('Member '.$i.' id : <input type="text" name="memberid'.$i.'" ><br>');
-		}
-		echo('</p>');
-		?><br><br>
-		<div class="g-recaptcha" data-sitekey="6Ledks4UAAAAAPzLeTPcEismbJmGTiSng_GUB6Sy"></div>
-		<br><br><input type="submit" value = "Submit" name='submit2' >
-	</form>
-	</div>
-    </div>    
-</p>
-</body>
-</html>
->>>>>>> 51033ccf636d84077f02fc20b11de3d0cdbf7a7d
