@@ -28,9 +28,16 @@
 	<div class="login">
 	<form method="post" action="teamblackflag.php" name="regform">
 	<h1 id="register">Register</h1><br>
+<<<<<<< HEAD
 		<p id="para">Name </p><input type="text" name="team" id="name" ><br><br>
 		<p id="para">Id</p><input type="number" name="id" min="1" id="number"><br><br>
 		<input type="submit" value = "Submit" name="submit" >
+=======
+		<p id="para">Team name</p><input type="text" name="name" id="name" ><br><br>
+		<p id="para">Leader name</p><input type="text" name="team" id="name"><br><br>
+		<p id="para">Team size</p><input type="number" name="size" min="1" max="4" id="name"><br><br>
+		<input type="submit" value = "Submit" name="submit">
+>>>>>>> 51033ccf636d84077f02fc20b11de3d0cdbf7a7d
 	</div>
 </p>
 

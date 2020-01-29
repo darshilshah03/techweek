@@ -68,7 +68,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registerteam.php");
 			return;
 		}
@@ -98,7 +98,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registerteam.php");
 			return;
 		}
@@ -133,7 +133,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registerteam.php");
 			return;
 		}
@@ -149,7 +149,7 @@
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		if($row===false)
 		{
-			$_SESSION['error'] = "Invalid member id";
+			$_SESSION['error'] = "Invalid member id or User not Registered";
 			header("Location:registerteam.php");
 			return;
 		
@@ -179,16 +179,19 @@
 <head>
 	<title>Register </title>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<link rel="stylesheet" type="text/css" href="login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/registermagna.css">
     <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
 </head>
-<body style="background-color:rgb(35, 41, 53);text-align:center">
+<body style="background-color:rgb(35, 41, 53);text-align:center" id="mbody">
 <p>
+    <div class="section">
 	<div class="login">
 	<form method="post" action="team.php">
-		<p>Team name</p> <input type="text" name="name" value= <?= htmlentities($_POST['name']) ?> disabled><br>
-		<p> Leader name</p><input type="text" name="team" value= <?= htmlentities($_POST['team']) ?> disabled><br>
-		<p>Team size</p> <input type="number" name="size" min="1" max="4" value=<?= htmlentities($_POST['size']) ?>disabled ><br>
+		<p id="para">Team name</p> <input type="text" name="name" id="name" value= <?= htmlentities($_POST['name']) ?> disabled><br>
+		<p id="para">Leader name</p><input type="text" name="team" id="name" value= <?= htmlentities($_POST['team']) ?> disabled><br>
+		<p id="para">Team size</p> <input type="number" name="size" id="name" min="1" max="4" value=<?= htmlentities($_POST['size']) ?>disabled ><br>
 		<?php 
 		$size = $_POST['size'];
 		echo('<p>');
@@ -201,6 +204,8 @@
 		<br><br><input type="submit" value = "Submit" name='submit2' >
 	</form>
 	</div>
+        <script src="js/bootstrap.js"></script>
+    </div>
 </p>
 </body>
 </html>
