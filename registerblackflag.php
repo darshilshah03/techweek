@@ -6,8 +6,11 @@
 	<meta charset="utf-8">   
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	        <link rel="stylesheet" type="text/css" href="registersingle.css">    <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
+	        <link rel="stylesheet" type="text/css" href="registersingle.css">    
+			<link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
+
 </head>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <body style="background-color:rgb(35, 41, 53);text-align:center" id="mbody">
 
 <div class= "section">
