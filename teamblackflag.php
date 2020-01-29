@@ -17,10 +17,10 @@
 		// }
 		if(isset($_POST['submit']))
 		{
-		function CheckCaptcha($userResponse) {
+			function CheckCaptcha($userResponse) {
 				$fields_string = '';
 				$fields = array(
-					'secret' => '6Ledks4UAAAAABBkiWHTAUlR60CJsGTB67x0V0CO',
+					'secret' => '6LcUks4UAAAAAAQsuZYj79jbYVgikiyRNU4Dv3Sf',
 					'response' => $userResponse
 				);
 				foreach($fields as $key=>$value)
