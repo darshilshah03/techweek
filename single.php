@@ -41,6 +41,12 @@ function CheckCaptcha($userResponse) {
 			header("Location: registersingle.php");
 			return;
 		}
+		if(strlen(trim($_POST['college']))<1)
+		{
+			$_SESSION['error'] = "College name should not be empty";
+			header("Location: registersingle.php");
+			return;
+		}
 		if(strlen($_POST['phone'])!=10)
 		{
 			$_SESSION['error'] = "Invalid phone number";
