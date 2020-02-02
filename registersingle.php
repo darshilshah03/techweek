@@ -34,7 +34,7 @@
                     <p id="para">Email</p>
                     <input type="email" name="email" id="email"><br><br>
                     <p id="para">Phone no.</p>
-                    <input type="number" name="phone" id="phone"><br><br>
+                    <input type="number" name="phone" id="phone" required><br><br>
 		            <p id="para">Outstation</p>
                     <input type="radio" name="outst" value="1"><p id="para">Yes</p>
 			        <input type="radio" name="outst" value="0" checked><p id="para">No</p><br>
