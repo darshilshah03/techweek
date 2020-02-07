@@ -33,7 +33,7 @@ function CheckCaptcha($userResponse) {
 		return;
     }
 }
-	if(isset($_POST['email'])&&isset($_POST['name'])&&isset($_POST['phone'])&&isset($_POST['outst']) &&isset($_POST['college']))
+	if(isset($_POST['email'])&&isset($_POST['name'])&&isset($_POST['phone'])&&isset($_POST['college']))
 	{
 		if(strlen($_POST['name'])<1)
 		{
@@ -77,12 +77,13 @@ function CheckCaptcha($userResponse) {
 		$stmt = $pdo->query("SELECT * FROM techweek.participant ORDER BY id DESC LIMIT 1");
 		$user = $stmt->fetch();
 		$id = $user['id'] +1;
+		$out = 0;
 		$stmt = $pdo->prepare("INSERT INTO techweek.participant (name,email,phone,outstation,id,collegename) VALUES (:nam,:em,:ph,:ou,:id,:cl)");
 		$stmt->execute(array(
 			':nam' => $_POST['name'],
 			':em' => $_POST['email'],
 			':ph' => $_POST['phone'],
-			':ou' => $_POST['outst'],
+			':ou' => $out,
 			':id' => $id,
 			':cl' => $_POST['college']
 		));
